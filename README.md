@@ -92,7 +92,7 @@ Important factors to take into consideration.
 
 •	Security: Highly secured with strong security group policies and IAM roles.
 
-•	Availability: The load balancer health check checks the health of the instances, health check on Route 53 and the load balancer and auto scaling group are multi-A-Z enabled.
+•	Availability: The load balancer health check checks the health of the instances, and the load balancer and auto scaling group are multi-A-Z enabled.
 
 •	Price Optimization: Since the application is used globally let’s consider 5million of users. These 5million users are not going to be active every day. So, let’s consider 1million active users per day, this therefore means we have 1million request per day. 
 
