@@ -92,10 +92,31 @@ Important factors to take into consideration.
 
 •	Security: Highly secured with strong security group policies and IAM roles.
 
-•	Availability: The load balancer health check checks the health of the instances, and the load balancer and auto scaling group are multi-A-Z enabled.
+•	Availability: The load balancer health check checks the health of the instances, health check on Route 53 and the load balancer and auto scaling group are multi-A-Z enabled.
 
 •	Price Optimization: Since the application is used globally let’s consider 5million of users. These 5million users are not going to be active every day. So, let’s consider 1million active users per day, this therefore means we have 1million request per day. 
-Compute optimized C1.xlarge
+
+Memory optimized r6i.2xlarge = $0.3334/1yr and $0.2286/3yrs for a reserved instance
+
+$0.2286 * 6 instances = 2.3334/1yr and $1.3716/3yrs
+
+Route 53 : $0.60 per million queries/month for latency base = $0.60 x 5million queries per month = $3.0/month = $36.0/year
+
+Amazon RDS: db.m6g.2xlarge Reserved Instance = $284.19 per month and $3,410.28 per year
+
+Amazon DynamoDB: $1.25 per million write request units, $0.25 per million read request units, $0.10 per GB-month
+
+Amazon Cognito: 5million active users per month * $0.00460/user
+
+CloudFront: price class all $0.847/month and $10.164/year
+
+Amazon S3: 1 TB of storage provisioned = $60.0/month
+
+Amazon Pinpoint:$500 for 5million email per month, $5.0 for 5million push notifications per month, $510 for in app messaging per month
+
+Amazon OpenSearch service: m6g.2xlarge.search = $257.69/month
+
+Amazon Personalize: $0.018 per 100,000 users, there for, 5milllion users = $0.90 per month
 
 
 
